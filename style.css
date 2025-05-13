@@ -15,7 +15,7 @@ body {
   
 /* Calculadora */
 .calculator {
-    background-color: #1e1e2f;
+    background-color: #3a3a3a;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     padding: 20px;
@@ -42,6 +42,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    padding: 20px;
 }
   
 button {
@@ -59,7 +60,7 @@ button:hover {
   
 /* Cores por tipo */
 .number {
-    background-color: #ffe85f;
+    background-color: #da872a;
 }
   
 .operator,
