@@ -45,12 +45,17 @@ buttons.forEach(button => {
       expression = '';
       updateDisplay('0');
     } else if (value === '⌫') {
-      if (currentInput !== '') {
+      if (expression.endsWith(' ')) {
+        expression = expression.slice(0, -3); // remove operador e espaços
+        operator = '';
+        currentInput = previousInput;
+        previousInput = '';
+        } else {
         currentInput = currentInput.slice(0, -1);
+        expression = expression.slice(0, -1);
+        }
+        updateDisplay(expression || '0');
       }
-      expression = expression.slice(0, -1);
-      updateDisplay(expression || '0');
-    }
   });
 });
 
