@@ -22,6 +22,7 @@ buttons.forEach(button => {
       }
     } else if (button.classList.contains('operator')) {
       if (currentInput === '') return;
+      if (operator) return; // já tem operador, não permitir outro
       operator = value;
       previousInput = currentInput;
       currentInput = '';
