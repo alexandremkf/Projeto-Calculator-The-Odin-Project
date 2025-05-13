@@ -31,13 +31,19 @@ buttons.forEach(button => {
     } else if (button.classList.contains('equals')) {
       if (previousInput && currentInput && operator) {
         const result = calculate(previousInput, currentInput, operator);
-        expression += ` = ${result}`;
-        updateDisplay(expression);
+
+        if (result === 'Erro') {
+            updateDisplay('Erro');
+          } else {
+            expression += ` = ${result}`;
+            updateDisplay(expression);
+        }
+
         // Reset para próxima operação
         currentInput = result;
         previousInput = '';
         operator = '';
-        expression = result;
+        expression = result === 'Erro' ? '' : result;
       }
     } else if (value === 'C') {
       currentInput = '';
