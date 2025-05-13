@@ -11,9 +11,15 @@ buttons.forEach(button => {
     const value = button.textContent;
 
     if (button.classList.contains('number')) {
-      currentInput += value;
-      expression += value;
-      updateDisplay(expression);
+        if (value === '0' && currentInput === '0') return; // impede 00
+        if (currentInput === '0' && value !== '.') {
+          currentInput = value; // substitui 0 por outro número
+          expression = expression.slice(0, -1) + value;
+        } else {
+          currentInput += value;
+          expression += value;
+        }
+    updateDisplay(expression);
     } else if (button.classList.contains('decimal')) {
       if (!currentInput.includes('.')) {
         currentInput += '.';
