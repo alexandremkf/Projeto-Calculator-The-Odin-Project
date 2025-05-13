@@ -103,3 +103,34 @@ function calculate(a, b, operator) {
     ? parseFloat(result.toFixed(3)).toString()
     : result;
 }
+
+document.addEventListener('keydown', (e) => {
+    const key = e.key;
+  
+    if (!isNaN(key)) {
+      clickButtonWithText(key);
+    } else if (key === '/') {
+        // força clicar o botão com texto "/"
+        clickButtonWithText('/');
+      } else if (['+', '-', '*'].includes(key)) {
+        clickButtonWithText(key);
+      } else if (key === 'Enter' || key === '=') {
+      clickButtonWithText('=');
+    } else if (key === 'Backspace') {
+      clickButtonWithText('⌫');
+    } else if (key === 'Escape' || key.toLowerCase() === 'c') {
+      clickButtonWithText('C');
+    } else if (key === '.') {
+      clickButtonWithText('.');
+    }
+});
+  
+function clickButtonWithText(text) {
+    const buttons = document.querySelectorAll('button');
+    for (let button of buttons) {
+      if (button.textContent === text) {
+        button.click();
+        break;
+      }
+    }
+}
