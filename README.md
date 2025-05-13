@@ -17,6 +17,17 @@ Esse é um projetinho de **calculadora simples** feita com HTML, CSS e JavaScrip
 - **CSS**: Estilo e design responsivo
 - **JavaScript**: Lógica para os cálculos e interação 🧠
 
+## 🎮 Suporte ao Teclado
+
+Agora dá para usar a calculadora também direto do teclado! Veja as teclas mapeadas:
+
+- **0–9**: digitar números  
+- **+ - * /**: operadores  
+- **Enter** ou **=**: executa o cálculo  
+- **Backspace**: apaga o último caractere (⌫)  
+- **Esc** ou **C**: limpa tudo (C)  
+- **.**: insere ponto decimal  
+
 ## 👨‍💻 Autor
 
 Este projeto foi criado por **Alexandre Matiello**. Sou um desenvolvedor apaixonado por criar experiências simples e funcionais com **HTML, CSS e JavaScript**. 😄
