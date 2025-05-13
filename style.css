@@ -1,25 +1,79 @@
-body {
-    background-color: #d3d0db;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
+}
+  
+body {
+    background-color: #d7d3dc;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
   
+/* Calculadora */
 .calculator {
-    background-color: #2c2b36;
-    border-radius: 20px;
+    background-color: #1e1e2f;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 320px;
 }
   
-.display {
-    background-color: #d3d0db;
-    color: black;
-    font-size: 2rem;
-    padding: 20px;
+/* Display */
+#display {
+    background-color: #dcd6e3;
+    height: 80px;
     border-radius: 10px;
-    text-align: right;
     margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 2rem;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+}
+  
+/* Grade de botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+  
+button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+  
+button:hover {
+    transform: scale(1.05);
+}
+  
+/* Cores por tipo */
+.number {
+    background-color: #ffe85f;
+}
+  
+.operator,
+.equals,
+.function,
+.decimal {
+    background-color: #dcd6e3;
+}
+  
+.equals {
+    background-color: #dcd6e3;
+    grid-column: span 1;
+}
+  
+.zero {
+    grid-column: span 2;
 }  
