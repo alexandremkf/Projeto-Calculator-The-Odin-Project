@@ -36,9 +36,3 @@ function operate(operator, a, b) {
         return null;
     }
 }
-  
-// Testes (temporários — remova depois)
-console.log(operate("+", 2, 3)); // 5
-console.log(operate("-", 10, 4)); // 6
-console.log(operate("*", 6, 7)); // 42
-console.log(operate("/", 9, 3)); // 3  
