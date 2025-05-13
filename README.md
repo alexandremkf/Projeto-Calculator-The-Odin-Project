@@ -17,10 +17,6 @@ Esse é um projetinho de **calculadora simples** feita com HTML, CSS e JavaScrip
 - **CSS**: Estilo e design responsivo
 - **JavaScript**: Lógica para os cálculos e interação 🧠
 
-## Screenshots 📸
-
-![Calculadora em ação](screenshot.png)
-
 ## 👨‍💻 Autor
 
 Este projeto foi criado por **Alexandre Matiello**. Sou um desenvolvedor apaixonado por criar experiências simples e funcionais com **HTML, CSS e JavaScript**. 😄
